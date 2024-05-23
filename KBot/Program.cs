@@ -31,9 +31,7 @@ builder.Services.AddInteractionService((config, _) =>
     config.UseCompiledLambda = true;
 });
 
-
-
-
+builder.Services.AddHostedService<CommandHandler>();
 builder.Services.AddHostedService<KBotHeart>();
 
 var host = builder.Build();
